@@ -213,8 +213,8 @@ section article q {
     justify-content: space-between;
   }
   section article {
-    padding: 30px 44px;
-    width: 344px;
+    padding: 30px 47px;
+    width: 350px;
   }
   section article:nth-child(2) {
     transform: translateY(20px);
