@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+:root {
+  --Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "League Spartan", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  width: 80%;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+header .left {
+  width: 100%;
+  text-align: center;
+}
+header .left h1 {
+  color: var(--Very-Dark-Magenta);
+  font-size: 40px;
+  letter-spacing: -2px;
+  max-width: 350px;
+  margin: auto;
+}
+header .left p {
+  font-size: 16px;
+  color: var(--Dark-Grayish-Magenta);
+  line-height: 1.3;
+  font-weight: 500;
+  max-width: 350px;
+  margin: 30px auto;
+}
+
+header .right {
+  width: 100%;
+  text-align: center;
+}
+
+header .right .rate {
+  padding: 20px;
+  background-color: var(--Light-Grayish-Magenta);
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+header .right .rate span {
+  color: var(--Very-Dark-Magenta);
+  font-weight: 700;
+}
+
+header .right .rate .icon-star {
+  margin-bottom: 10px;
+}
+header .right .rate .icon-star img {
+  padding-right: 5px;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  margin: 30px auto;
+  place-items: center;
+  justify-content: center;
+}
+
+section article {
+  background-color: var(--Very-Dark-Magenta);
+  padding: 30px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+section article .comment {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+section article .comment img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+section article .comment .name h2 {
+  color: var(--White);
+  font-size: 15px;
+  line-height: 1.4;
+}
+section article .comment .name span {
+  color: var(--Soft-Pink);
+  font-size: 15px;
+}
+section article q {
+  color: var(--White);
+  font-size: 15px;
+  line-height: 1.3;
+}
+@media (min-width: 375px) {
+  main::before {
+    background: url(../images/bg-pattern-top-mobile.svg) no-repeat;
+    top: 0;
+    left: 0;
+    content: "";
+    position: absolute;
+    width: 374px;
+    height: 232px;
+    z-index: -1;
+  }
+  main::after {
+    background: url(../images/bg-pattern-bottom-mobile.svg) no-repeat;
+    bottom: 0;
+    right: 0;
+    content: "";
+    position: absolute;
+    width: 375px;
+    height: 503px;
+    z-index: -1;
+  }
+}
+
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    gap: 20px;
+  }
+  main::before {
+    background: url(../images/bg-pattern-top-desktop.svg) no-repeat;
+    top: 0;
+    left: 0;
+    content: "";
+    position: absolute;
+    width: 584px;
+    height: 362px;
+    z-index: -1;
+  }
+  main::after {
+    background: url(../images/bg-pattern-bottom-desktop.svg) no-repeat;
+    bottom: 0;
+    right: 0;
+    content: "";
+    position: absolute;
+    width: 1085px;
+    height: 673;
+    z-index: -1;
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    margin-bottom: 50px;
+  }
+
+  header .left {
+    text-align: left;
+    flex-basis: 50%;
+  }
+  header .left h1 {
+    font-size: 60px;
+    max-width: 355px;
+    margin: 0;
+  }
+  header .left p {
+    max-width: 355px;
+    margin-left: 0;
+    font-size: 15px;
+  }
+  header .right {
+    flex-basis: 50%;
+  }
+  header .right .rate {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  header .right .rate .icon-star {
+    display: inline-block;
+  }
+  header .right .rate:first-child {
+    transform: translateX(-80px);
+  }
+  header .right .rate:nth-child(2) {
+    transform: translateX(-40px);
+  }
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  section article {
+    padding: 30px 47px;
+    width: 350px;
+  }
+  section article:nth-child(2) {
+    transform: translateY(20px);
+  }
+  section article:last-child {
+    transform: translateY(40px);
+  }
+}
